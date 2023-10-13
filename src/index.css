@@ -1,0 +1,20 @@
+#newsCard
+{
+    border-width: 1px;
+    border-color: black;
+}
+
+#sourceBadge
+{
+    z-index: 1;
+    left: 85%;
+    position: absolute;
+}
+
+#navbar
+{
+    text-size-adjust: auto;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
