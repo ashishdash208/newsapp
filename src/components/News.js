@@ -8,6 +8,8 @@ export class News extends Component {
   defaultTitle = "This article does not have a title. This is likely an API problem. Click on the button to read more anyway.";
   defaultDescription = "This article does not have a description. This is likely an API problem. Click on the button to read more anyway.";
 
+  //* CLASS-BASED COMPONENTS
+
   static defaultProps = {
     country: "in",
     pageSize: 24,
