@@ -8,7 +8,7 @@ export class News extends Component {
   defaultTitle = "This article does not have a title. This is likely an API problem. Click on the button to read more anyway.";
   defaultDescription = "This article does not have a description. This is likely an API problem. Click on the button to read more anyway.";
 
-  //* CLASS-BASED COMPONENTS
+  //* CLASS-BASED COMPONENTS; Not there in function-based branch
 
   static defaultProps = {
     country: "in",
@@ -41,6 +41,7 @@ export class News extends Component {
       const response = await fetch(url);
       let parsedData = await response.json();        
       this.setState({articles: parsedData.articles, totalResults: parsedData.totalResults})
+      this.filterArray(this.state.articles, this.state.articles.title, "[Removed]")
     }
     catch(error)
     {
@@ -85,6 +86,10 @@ export class News extends Component {
       articles: parsedData.articles,
       page: this.state.page - 1,
     })
+  }
+
+  filterArray = (array, field, target) => {
+    array.filter((field) => array.field !== target);
   }
 
   fetchMoreData = async () => {
