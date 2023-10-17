@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "../index.css"
 
-export class NewsItem extends Component {
-
-  render() {
-    let {title, description, imageUrl, newsUrl, date, source} = this.props;
+const NewsItem = (props) => {
+    let {title, description, imageUrl, newsUrl, date, source} = props;
     const d = new Date(date);
     const s = d.toLocaleTimeString()+", "+d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear();
     return (
@@ -21,7 +19,6 @@ export class NewsItem extends Component {
         </div>
       </div>
     )
-  }
 }
 
 export default NewsItem
