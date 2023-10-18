@@ -52,6 +52,7 @@ export class News extends Component {
   async componentDidMount(){
     this.setState({ page: 1 });
     this.fetchData();
+    console.log("classy")
   }
 
   async componentDidUpdate(prevProps){
