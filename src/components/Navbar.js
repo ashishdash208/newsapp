@@ -6,7 +6,7 @@ import "../index.css";
 const Navbar = () => {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary" id="navbar">
           <div className="container-fluid">
             <Link className="navbar-brand" to ="/">
               NewsBloom
@@ -20,7 +20,7 @@ const Navbar = () => {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to ="/">
+                  <Link className="nav-link" aria-current="page" to ="/">
                     Home
                   </Link>
                 </li>

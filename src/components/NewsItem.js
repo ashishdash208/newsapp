@@ -1,5 +1,6 @@
 import React from 'react'
 import "../index.css"
+import PropTypes from 'prop-types'
 
 const NewsItem = (props) => {
     let {title, description, imageUrl, newsUrl, date, source} = props;
@@ -10,8 +11,8 @@ const NewsItem = (props) => {
         <span className="position-absolute top-0 start-30 translate-middle badge rounded-pill bg-success" id="sourceBadge" >{source}</span>
         <img src={imageUrl? imageUrl:"https://guwahatiplus.com/public/web/images/default-news.png"} className="card-img-top" alt="ALTERNATE" height={250} width={300} />
         <div className="card-body">
-          <h5 className="card-title">{title}...</h5>
-          <p className="card-text">{description}...</p>
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{description}</p>
           <a href={newsUrl} target="_blank" className="btn btn-sm btn-dark" rel="noreferrer">Read More</a>
           <p className="card-text">
             <small className="text-body-secondary">Last Updated at {s}</small>
@@ -22,3 +23,8 @@ const NewsItem = (props) => {
 }
 
 export default NewsItem
+
+NewsItem.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string
+}
