@@ -25,3 +25,7 @@ yarn-error.log*
 #user
 src/sampleOutput.json
 src/newsbloom.logo.jpg
+
+#user
+src/sampleOutput.json
+src/newsbloom.logo.jpg
