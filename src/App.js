@@ -4,14 +4,12 @@ import Navbar from './components/Navbar';
 import News from './components/News';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 
-
 export default class App extends Component {
   render() {
     return (
       <div>
         <Router>
           <Navbar />
-            
           <Routes>
             <Route path="/" element={<News category="general"/>} > </Route>
             <Route path="/business" element={<News category="business"/>} > </Route>
@@ -28,4 +26,3 @@ export default class App extends Component {
     )
   }
 }
-
